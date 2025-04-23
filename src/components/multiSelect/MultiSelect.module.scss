@@ -1,0 +1,93 @@
+.wrapper {
+  position: relative;
+  width: 300px;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid #ccc;
+  cursor: text;
+  border-radius: 10px;
+
+  &.isOpen {
+    border: solid 2px rgb(0, 119, 255);
+    box-shadow: 0px 0px 1px 2px #b0d9ff;
+  }
+}
+
+.selectedItem {
+  background-color: #e2e8f0;
+  margin: 4px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.inputWrapper input {
+  border: none;
+  flex: 1;
+  min-width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.dropdown {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #cccccc88;
+  z-index: 10;
+  max-height: 150px;
+  overflow-y: auto;
+  margin-top: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 18px -5px #00000026;
+  padding: 10px;
+}
+
+.option {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.1s all;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+
+  &.active {
+    background-color: #f1f4ff;
+    color : #7986cc;
+    
+    &::after{
+      content: "✓";
+
+    }
+  }
+}
+
+.option:hover {
+  background-color: #f1f4ff;
+  color: #7986cc;
+}
+
+.removeButton {
+  background: none;
+  border: none;
+  color: #718096;
+  margin-left: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.removeButton:hover {
+  color: #e53e3e;
+}

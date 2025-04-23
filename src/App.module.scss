@@ -1,0 +1,26 @@
+* {
+  scrollbar-color: #cccccc #ffffff;
+  scrollbar-width: thin !important;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 2px;
+  background: #cccccc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  -webkit-border-radius: 1px;
+}
+
+::-webkit-scrollbar-corner {
+  background: #ffffff;
+}
+.mainPage {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
